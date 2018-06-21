@@ -3,7 +3,7 @@
 # Application variables
 gitrepo=https://github.com/fabriciosanchez/eshop.git
 branch=master
-token=951cbc5c5d7076a0343a1d4ae940e224624a7f67
+token=8f2d047896ea457583ab10ca96f4bdbdef8ebefe
 resourcegroup=rgmoett-app
 webappname=moett$RANDOM
 location=eastus
