@@ -1,8 +1,9 @@
 #!/bin/bash
 
 # Replace the following URL with a public GitHub repo URL
-gitrepo=
+gitrepo=https://github.com/fabriciosanchez/eshop.git
 branch=master
+token=40bf79f7693d96953c4c5310d919072b3dbd361e
 resourcegroup=rgmoett
 webappname=moett$RANDOM
 location=eastus
@@ -13,13 +14,15 @@ sku=FREE
 az group create --location $location --name $resourcegroup
 
 # Create an App Service plan in `FREE` tier.
-az appservice plan create --name $webappname --resource-group $resourcegroup --sku $sku
+az appservice plan create --name $appserviceplan --resource-group $resourcegroup --sku $sku
 
 # Create a web app.
 az webapp create --name $webappname --resource-group $resourcegroup --plan $appserviceplan
 
 # Deploy code from a public GitHub repository. 
-az webapp deployment source config --name $webappname --resource-group $resourcegroup --repo-url $gitrepo --branch $branch --manual-integration
+#az webapp deployment source config --name $webappname --resource-group $resourcegroup --repo-url $gitrepo --branch $branch --manual-integration --git-token $token
+az webapp deployment source config --name $webappname --resource-group $resourcegroup --repo-url $gitrepo --branch $branch --git-token $token
+
 
 # Copy the result of the following command into a browser to see the web app.
-echo http://$webappname.azurewebsites.net
+echo https://$webappname.azurewebsites.net
