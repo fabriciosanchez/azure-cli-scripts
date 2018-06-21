@@ -2,7 +2,7 @@
 
 # Global variables
 warurl=https://raw.githubusercontent.com/Azure-Samples/html-docs-hello-world/master/index.html
-resourcegroup=rgmoett
+resourcegroup=rgmoett-app
 webappname=moett$RANDOM
 location=eastus
 appserviceplan=moettserviceplan

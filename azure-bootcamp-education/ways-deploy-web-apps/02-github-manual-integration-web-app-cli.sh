@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# Replace the following URL with a public GitHub repo URL
+# Application variables
 gitrepo=https://github.com/fabriciosanchez/eshop.git
 branch=master
-token=40bf79f7693d96953c4c5310d919072b3dbd361e
-resourcegroup=rgmoett
+token=6b547383578642be12bd34a9c3fa191f0d51bc9c
+resourcegroup=rgmoett-app
 webappname=moett$RANDOM
 location=eastus
 appserviceplan=moettserviceplan
@@ -20,9 +20,7 @@ az appservice plan create --name $appserviceplan --resource-group $resourcegroup
 az webapp create --name $webappname --resource-group $resourcegroup --plan $appserviceplan
 
 # Deploy code from a public GitHub repository. 
-#az webapp deployment source config --name $webappname --resource-group $resourcegroup --repo-url $gitrepo --branch $branch --manual-integration --git-token $token
 az webapp deployment source config --name $webappname --resource-group $resourcegroup --repo-url $gitrepo --branch $branch --git-token $token
-
 
 # Copy the result of the following command into a browser to see the web app.
 echo https://$webappname.azurewebsites.net
