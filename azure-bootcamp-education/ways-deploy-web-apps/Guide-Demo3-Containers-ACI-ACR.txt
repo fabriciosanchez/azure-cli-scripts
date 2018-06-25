@@ -1,0 +1,26 @@
+============================================================================
+DEMO 3 - Creating ACI and deploying app to it
+============================================================================
+
+############### PART 1 - Creating ACI and publishing app ###################
+
+1.  Run the script "05-creating-aci-cli" to both create and publish out the
+    application image to ACI. Open the file and explain every single action in
+    there.
+
+2.  Open up Azure Portal to show the container instance working.
+
+3.  Run the application throught the regular browser to show that everything 
+    is working.
+
+4.  Show how to get logs from that application running the following command:
+    - Verifying deployment status
+        az container show --resource-group rgmoett-aci --name acimoett --query instanceView.state
+    - To get the full qualified name (FQDN)
+        az container show --resource-group rgmoett-aci --name acimoett --query ipAddress.fqdn
+    - To watch container logs
+        az container logs --resource-group rgmoett-aci --name acimoett
+
+
+######### PART 2 - Using ACI to scale, update and upgrade that cluster #########
+
