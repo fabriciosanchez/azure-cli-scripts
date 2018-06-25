@@ -22,5 +22,4 @@ DEMO 3 - Creating ACI and deploying app to it
         az container logs --resource-group rgmoett-aci --name acimoett
 
 
-######### PART 2 - Using ACI to scale, update and upgrade that cluster #########
 

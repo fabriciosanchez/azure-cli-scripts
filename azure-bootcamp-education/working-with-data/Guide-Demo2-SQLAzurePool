@@ -1,0 +1,15 @@
+============================================================================
+DEMO 2 - Showing how SQL Azure Database Pool works
+============================================================================
+
+1.  Open up the file "02-creating-sqldatabasepool-cli.sh" and show every single
+    line of it. Explain how it works.
+
+2.  Through Ubuntu Subsystem, execute the script "02-creating-sqldatabasepool-cli.sh"
+    and watch the deployment through the Azure Portal.
+
+3.  Through the portal, shows up the two different databases crated and explore
+    the main aspects of it.
+
+4.  Adjust out the sample application to connect in this new SQL Azure Data Pool
+    in order to show how this process works.
