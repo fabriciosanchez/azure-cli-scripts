@@ -1,0 +1,47 @@
+============================================================================
+DEMO 3 - Migrating a local database to Azure SQL database
+============================================================================
+
+################ PART 1 - PRE-REQ ######################################
+
+1.  Enable the TCP/IP protocol, which is disabled by default during SQL Server 
+    Express installation, by following the instructions in the article Enable or 
+    Disable a Server Network Protocol.
+
+2.  Create an instance of Azure SQL Database (already done by Demo 1)
+
+3.  Install the Data Migration Assistant v3.3 or later
+
+4.  Create a VNET for the Azure Database Migration Service
+
+5.  Ensure that your Azure Virtual Network (VNET) Network Security Group rules 
+    do not block the following communication ports 443, 53, 9354, 445, 12000
+
+6.  Configure your Windows Firewall for database engine access
+
+7.  Open your Windows firewall to allow the Azure Database Migration Service 
+    to access the source SQL Server, which by default is TCP port 1433
+
+8.  If you are running multiple named SQL Server instances using dynamic ports, 
+    you may wish to enable the SQL Browser Service and allow access to UDP port 
+    1434 through your firewalls so that the Azure Database Migration Service can 
+    connect to a named instance on your source server.
+
+9.  Create a server-level firewall rule for the Azure SQL Database server to 
+    allow the Azure Database Migration Service access to the target databases. 
+    
+10. Provide the subnet range of the VNET used for the Azure Database Migration 
+    Service.
+
+
+##################### PART 2 - ASSESSMENT ##################################
+
+1.  Connect to the local database to show what we're going to migrate to our
+    online instance into Azure.
+
+2.  Execute Data Migration Assistant and execute the local assessment.
+
+3. Export and save the assessment's result.
+
+
+######################## PART 3 - Migration ################################
