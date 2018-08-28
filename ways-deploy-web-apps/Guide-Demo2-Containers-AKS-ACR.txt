@@ -1,0 +1,82 @@
+============================================================================
+DEMO 2 - Logging into ACR, publishing image and using AKS to scale it
+============================================================================
+
+############### PART 1 - Login and image push to ACR #######################
+
+1.  Run the script "03-creating-container-registry-cli" to create and configure
+    Azure Container Registry. Open up the file, explain it and run it. After, 
+    Shows up the portal to confirmate out the sucess of this step.
+
+2.  Run de script "04-creating-aks-cluster" to create and configure AKS cluster.
+    Open up the file, explain it and then, run it. After that, go to Azure Portal 
+    to show the result of this process.
+
+3.  Login to ACR throug the following command:
+    az acr login --name acrmoett
+
+4.  Once logged into the service, tag the created image out in order to send it 
+    to ACR repository. To get that, using Power Shell run the commands below:
+
+    - Get images: 
+        docker images
+    - Get ACRs
+        az acr list
+    - Tag the right image: 
+        docker tag eshopwebmvc acrmoett.azurecr.io/eshopwebmvc:v1
+    - Get images to see the new version tagged: 
+        docker images
+
+5.  Push images up to ACR executing the following command:
+    docker push acrmoett.azurecr.io/eshopwebmvc:v1
+
+6.  In order to verify if the operation successfuly completed, run the following
+    command:
+    az acr repository list --name acrmoett --output table
+
+    Also, open up the Azure Portal to show up the repository updated with that 
+    image.
+
+
+######### PART 2 - Using AKS to scale, update and upgrade that cluster #########
+
+1.  Open up the EShop's yaml file that describes the environment to AKS. Explain out 
+    each section of it and how Kubernetes is going to make the magic based on that.
+
+2.  Submit this "yaml" file to AKS cluster through the following command:
+    kubectl apply -f eshop-aks.yml
+
+3.  In order to test the progress of our deployment, we can execute out the following
+    command:
+    kubectl get service eshopwebmvc --watch
+
+4.  Once the AKS attributes a external IP to our service endpoint, we can see our app
+    in production. Just opening up my browser and typing that public IP :5106 the
+    would be enough to pop up the app.
+
+5.  Let's say that I've been monitoring the my cluster and I identified that I need
+    to scale it out adding more nodes to support my growing application. Let's say 
+    I would like to increase my host from 1 to 3, for example. I could easily do
+    that executing the command:
+    az aks scale --resource-group=rgmoett-aks --name=aksmoett --node-count 3
+
+6.  Execute the command below to show the cluster with 3 nodes instead 1. Also,
+    open up Azure portal and show out the update from there.
+    kubectl get nodes
+
+7.  Type the command below to show the current amont of pods deployed.
+    kubectl get pods
+
+8.  Type de command below to show how to manually scale out pods.
+    kubectl scale --replicas=5 deployment/eshopwebmvc
+
+9.  Type the command below to show out the new amount of pods scaled out manually.
+    Also, shows up this manual scaling result through the portal.
+    kubectl get pods
+
+10. In order to configure the Pods auto-scaling process, execute the command below. 
+    Explain the metrics defined on the yaml file and also, that ones explicit here.
+    kubectl autoscale deployment eshopwebmvc --cpu-percent=50 --min=3 --max=10
+
+11. Execute belows command to show how you can monitor out the scaling process.
+    kubectl get hpa
