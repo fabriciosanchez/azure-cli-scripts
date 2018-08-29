@@ -1,7 +1,9 @@
 #!/bin/bash
 
 # Global variables
-rg=rgmoett-db
+rg=arecibo-db
 
 # Deleting resouce group
+echo "Removing" $rg"..."
 az group delete -n $rg
+echo "Done."

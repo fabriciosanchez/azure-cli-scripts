@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Global variables
-rg=rgmoett-cosmos
+rg=arecibo-cosmos
 
 # Deleting resouce group
 az group delete -n $rg
