@@ -1,13 +1,24 @@
 #!/bin/bash
 
 # Global variables
-rg=rgmoett-acr
+rg=arecibo-acr
 location=eastus
-acrname=acrmoett
+acrname=areciboacr
 sku=Basic
 
 # Create a resource group.
-az group create --location $location --name $rg
+echo "Creating a new resource group:" $rg"..."
+az group create \
+    --location $location \
+    --name $rg
+echo "Done."
+echo ""
 
 # Creating Docker Registry
-az acr create --resource-group $rg --name $acrname --sku $sku
+echo "Creating a new Azure Container Registry:" $acrname"..."
+az acr create \
+    --resource-group $rg \
+    --name $acrname \
+    --sku $sku
+echo "Done."
+echo ""
