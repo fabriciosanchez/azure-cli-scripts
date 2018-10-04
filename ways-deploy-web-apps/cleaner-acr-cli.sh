@@ -1,8 +1,7 @@
 #!/bin/bash
 
 # Global variables
-rg=rgmoett-acr
-
+rg={resource group name}
 # Deleting resouce group
 az group delete -n $rg
 
