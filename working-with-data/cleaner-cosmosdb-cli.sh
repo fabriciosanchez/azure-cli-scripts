@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Global variables
-rg=arecibo-cosmos
+rg={resource group name}
 
 # Deleting resouce group
 az group delete -n $rg
