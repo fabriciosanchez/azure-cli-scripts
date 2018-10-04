@@ -1,14 +1,14 @@
 #!/bin/bash
 
 # Application variables
-gitrepo=https://github.com/fabriciosanchez/eshop.git
-branch=master
-token=e0eab91a5c0e34f1f91704d1956913d7264b774c
-resourcegroup=arecibo-eshop
-webappname=arecibo-eshop
-location=eastus
-appserviceplan=arecibo-eshophostingplan
-sku=FREE
+gitrepo={github repository}
+branch={branch}
+token={personal access token}
+resourcegroup={resource group name}
+webappname={webapp name}
+location={location}
+appserviceplan={service plan name}
+sku={sku name}
 
 # Create a resource group.
 echo "Creating a new resource group:" $resourcegroup"..."
