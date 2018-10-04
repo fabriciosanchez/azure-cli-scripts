@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Global variables
-vnetname=vnetdatamigrationmoett
-subnetname=admssubnet
+vnetname={virtual network name}
+subnetname={subnet name}
 vnetprefix=10.0.0.0/16
 subnetprefix=10.0.0.0/24
-rg=rgmoett-db
-nsgname=nsgdatamigrationmoett
-location=eastus
+rg={resource group}
+nsgname={network security group}
+location={west us}
 
 # Creating the firewall (NSG) to the subnet of our data migration process
 az network nsg create \
