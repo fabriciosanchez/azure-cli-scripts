@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Global variables
-rg=arecibo-webapp
-rg2=arecibo-eshop
+rg={resource group name}
+rg2={resource group 2 name}
 
 # Deleting first resouce group
 echo "Removing resource group:" $rg"..."
