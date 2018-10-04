@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Global variables
-rg=arecibo-db
+rg={resource group name}
 
 # Deleting resouce group
 echo "Removing" $rg"..."
