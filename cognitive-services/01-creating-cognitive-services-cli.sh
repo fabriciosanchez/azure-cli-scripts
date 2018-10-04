@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Global variables
-rg="rgmoett-cognitiveservices"
-location="eastus"
-facename="facemoett"
-textanalyticsname="textanalyticsmoett"
-computervisionname="computervisionmoett"
-bingsearchname="bingsearchmoett"
-bingautosuggestname="bingautosuggestmoett"
+rg={resource group name}
+location={location}
+facename={face api name}
+textanalyticsname={text analytics name}
+computervisionname={computer vision name}
+bingsearchname={bing search name}
+bingautosuggestname={bing auto suggest name}
 
 # Creating a new resource group for Cognitive Services
 az group create \
