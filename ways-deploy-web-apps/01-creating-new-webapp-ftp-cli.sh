@@ -2,11 +2,11 @@
 
 # Global variables
 warurl=https://raw.githubusercontent.com/Azure-Samples/html-docs-hello-world/master/index.html
-resourcegroup=arecibo-webapp
-webappname=arecibo-$RANDOM
-location=eastus
-appserviceplan=arecibo-serviceplan
-sku=FREE
+resourcegroup={resource group name}
+webappname={webapp name}
+location={location}
+appserviceplan={service plan name}
+sku={sku for service plan}
 
 # Download sample static HTML page
 echo "Getting example of static HTML page..."
