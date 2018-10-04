@@ -1,18 +1,18 @@
 #!/bin/bash
 
 # Global variables
-acirg=rgmoett-aci
-acilocation=eastus
-aciname=acimoett
-acicpu=1
-acimemory=1
-aciport=5106
+acirg={resource group name}
+acilocation={location}
+aciname={aci name}
+acicpu={cpu number}
+acimemory={memory amount}
+aciport={aci public port}
 aciiptype=public
-acifqdn=acimoett
-acrname=acrmoett
-acrserver=acrmoett.azurecr.io
+acifqdn={aci fqdn}
+acrname={container registry name}
+acrserver={container registry uri}
 appimage=$acrserver/eshopwebmvc:v1
-acrspname=acrmoett-sp
+acrspname={container registry service principal name}
 
 # Getting ACR ID for authentication via Service Principal
 acrid=$(az acr show --name $acrname --query id --output tsv)
