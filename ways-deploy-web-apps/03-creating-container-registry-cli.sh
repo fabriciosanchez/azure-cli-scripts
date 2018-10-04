@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Global variables
-rg=arecibo-acr
-location=eastus
-acrname=areciboacr
-sku=Basic
+rg={resource group}
+location={location}
+acrname={container registry name}
+sku={sku}
 
 # Create a resource group.
 echo "Creating a new resource group:" $rg"..."
