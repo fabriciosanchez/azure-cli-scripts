@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Global variables
-rg=arecibo-aks
-location=eastus
-aksname=areciboaks
+rg={resource group}
+location={location}
+aksname={aks name}
 nodecount=3
-acrname=areciboacr
-rgacr=arecibo-acr
-subscriptionid=9b3db624-2934-44c6-830f-9a17cb92cb4a
+acrname={container registry name}
+rgacr={resource group container registry}
+subscriptionid={subscription id}
 
 # Creating a resource group.
 echo "Creating a new resource group:" $rg"..."
