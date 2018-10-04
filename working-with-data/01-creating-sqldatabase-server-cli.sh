@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Server variables
-resourcegroupname=arecibo-db
-servername=arecibo-sqlserver
-location=eastus
-adminlogin=fabricio
-password=admin@1029384756
+resourcegroupname={resource group name}
+servername={server name}
+location={location name}
+adminlogin={username}
+password={password}
 startip=0.0.0.0
 endip=255.255.255.255
 databasename1=catalogdb
