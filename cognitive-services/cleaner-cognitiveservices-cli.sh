@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Global variables
-rg=rgmoett-cognitiveservices
+rg={resource group name}
 
 # Deleting resouce group
 az group delete -n $rg
