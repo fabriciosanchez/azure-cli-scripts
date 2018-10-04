@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Global variables
-rg=arecibo-mysql
+rg={resource group name}
 
 # Removing resource group
 echo "Removing" $rg "and all the associated workloads..."
