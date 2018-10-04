@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Set variables for the new account, database, and collection
-resourceGroupName='arecibo-cosmos'
-location='eastus'
-name='arecibo-cosmos'
-databaseName='catalogdb'
-collectionName='catalog'
+resourceGroupName={resource group name}
+location={location}
+name={cosmosdb account name}
+databaseName={database name}
+collectionName={collection name}
 
 # Create a resource group
 echo "Creating a new resource group:" $resourceGroupName"..."
