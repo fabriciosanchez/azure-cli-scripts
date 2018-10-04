@@ -1,19 +1,19 @@
 #!/bin/bash
 
 # Global variables
-adminlogin=fabricio
-password=admin@1029384756
-servername=arecibo-sqlserverpool
-rg=arecibo-db
-location=eastus
-dbpool1=arecibo-pool1
-dbpool1dtus=50
-dbpool1dtumax=20
-dbpool1singlename=arecibo-db1
-dbpool2=arecibo-pool2
-dbpool2dtus=100
-dbpool2dtusmax=50
-so=S2
+adminlogin={username}
+password={username's password}
+servername={server name}
+rg={resource group}
+location={location}
+dbpool1={database pool 1 name}
+dbpool1dtus={database pool 1 dtus}
+dbpool1dtumax={database pool 1 dtus max}
+dbpool1singlename={database inside database pool 1}
+dbpool2={database pool 2 name}
+dbpool2dtus={database pool 2 dtus}
+dbpool2dtusmax={database pool 2 dtus max}
+so={database pool sku}
 
 # Create a logical server in the resource group
 echo "Creating logical server" $servername"..."
