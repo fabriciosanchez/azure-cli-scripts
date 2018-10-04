@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Global variables
-mysqllocation=westus
-mysqlrg=arecibo-mysql
-mysqlservername=arecibo-mysqlserver
-mysqlserverusername=fabricio
-mysqlserverpassword=admin@1029384756
-mysqlserversku=B_Gen4_2
-mysqldbname=catalogdb
+mysqllocation={location}
+mysqlrg={resource group}
+mysqlservername={mysql server name}
+mysqlserverusername={mysql server username}
+mysqlserverpassword={mysql server password}
+mysqlserversku={mysql sku}
+mysqldbname={database name}
 
 #Creating a new resource group
 echo "Creating a new resource group:" $mysqlrg"..."
