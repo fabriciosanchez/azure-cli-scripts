@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Global variable
-rg=rgmoett-db
-servername=sqlserverpoolmoett
+rg={resource group name}
+servername={server name}
 
 # Deleting server
 az sql server delete \
